@@ -18,8 +18,8 @@ NoNoteMsg BYTE 'No note has been setup yet. Create your first one',0
 invalidPwFormat BYTE 'Password not eligible (must be 8 characters long and have atleast one digit and a special character and an Uppercase character. Try Again)',0
 keyGenerationMsg BYTE 'Keys generated successfully',0
 pwEncryptConfirmation BYTE 'Your password is successfully encrypted and stored',0
-OpenNoteNum BYTE 'Enter the note number you want to open',0
-OpenPwMsg BYTE 'Enter your password',0
+OpenNoteNum BYTE 'Enter the note number you want to open',0 
+OpenPwMsg BYTE 'Enter your password',0 
 wrongNoteNumMsg BYTE 'No note exists with this number',0
 lockedMsg BYTE 'This note has been locked after 3 failed attempts',0
 attemptsLeftMsg BYTE 'Wrong password. Attempts left: ',0
