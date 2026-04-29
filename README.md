@@ -37,17 +37,65 @@ Bit inversion
 
 Passwords are stored only in encrypted form.
 
-Note Security Flow
-Create Note
-→ Encrypt Password
-→ Encrypt Note
-→ Store Securely
-Open Note
-→ Verify Password
-→ Decrypt Note
-→ Display Note
-→ Re-encrypt Note
-Brute Force Protection
+
+SecureX Encryption Flow
+
+
+1. Password Encryption Flow
+User enters 8-character password
+        ↓
+Validate password rules
+        ↓
+Generate key using note number
+        ↓
+Apply XOR with key
+        ↓
+Rotate bits
+        ↓
+Mix/scramble characters
+        ↓
+Invert bits
+        ↓
+Store encrypted password
+
+
+2. Password Login Flow
+User enters password again
+        ↓
+Encrypt it using same steps
+        ↓
+Compare with stored encrypted password
+        ↓
+If match → access granted
+If not → access denied
+
+
+3. Note Encryption Flow
+User writes note
+        ↓
+Generate note-based key
+        ↓
+Apply XOR to each character
+        ↓
+Rotate bits
+        ↓
+Apply character mixing
+        ↓
+Invert bits
+        ↓
+Store encrypted note in memory
+
+
+4. Note Decryption Flow
+User enters correct password
+        ↓
+Access granted
+        ↓
+Encrypted note is loaded
+        ↓
+Reverse encryption steps
+        ↓
+Original note is displayed
 
 After 3 incorrect password attempts:
 
